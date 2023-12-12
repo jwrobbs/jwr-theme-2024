@@ -46,3 +46,19 @@ function enqueue_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts' );
+
+
+/**
+ * Display site name
+ * H1 on front page, otherwise div.site-logo
+ *
+ * @return void
+ */
+function site_name() {
+	$site_name = get_bloginfo( 'name' );
+	if ( is_front_page() ) {
+		echo '<h1 class="site-name">' . esc_html( $site_name ) . '</h1>';
+	} else {
+		echo '<div class="site-name">' . esc_html( $site_name ) . '</div>';
+	}
+}
