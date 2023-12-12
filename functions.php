@@ -18,7 +18,18 @@ defined( 'ABSPATH' ) || exit;
  * @return void
  */
 function setup() {
+	\add_theme_support( 'post-thumbnails' );
+	\add_theme_support( 'html5', array( 'gallery', 'style', 'search-form', 'caption', 'script' ) );
+
+	\register_nav_menus(
+		array(
+			'primary' => __( 'Primary Menu', 'jwr-theme-2024' ),
+			'footer'  => __( 'Footer Menu', 'jwr-theme-2024' ),
+			'social'  => __( 'Social Menu', 'jwr-theme-2024' ),
+		)
+	);
 }
+add_action( 'after_setup_theme', __NAMESPACE__ . '\setup' );
 
 /**
  * Enqueue scripts and styles
