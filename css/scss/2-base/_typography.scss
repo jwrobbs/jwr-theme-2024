@@ -8,6 +8,17 @@
 	}
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: $font-weight-heading;
+	line-height: $line-height-heading;
+	margin: 0.25em 0;
+}
+
 h1 {
 	font-size: $heading1-size;
 }
