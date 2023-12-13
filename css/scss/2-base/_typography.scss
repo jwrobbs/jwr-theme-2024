@@ -1,0 +1,28 @@
+:root {
+	font-size: $base-font-size-mobile;
+	line-height: $line-height;
+	color: $text-color;
+
+	@include bp("small") {
+		font-size: $base-font-size;
+	}
+}
+
+h1 {
+	font-size: $heading1-size;
+}
+h2 {
+	font-size: $heading2-size;
+}
+h3 {
+	font-size: $heading3-size;
+}
+h4 {
+	font-size: $heading4-size;
+}
+h5 {
+	font-size: $heading5-size;
+}
+h6 {
+	font-size: $heading6-size;
+}
