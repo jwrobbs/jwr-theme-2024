@@ -1,0 +1,17 @@
+@use "sass:math";
+
+$base-font-size: 18px;
+$base-font-size-mobile: 16px;
+
+$line-height: 1.4;
+
+$heading-weight: 700;
+
+$typo-scale: 1.2;
+
+$heading1-size: 1rem * math.pow($typo-scale, 6);
+$heading2-size: 1rem * math.pow($typo-scale, 5);
+$heading3-size: 1rem * math.pow($typo-scale, 4);
+$heading4-size: 1rem * math.pow($typo-scale, 3);
+$heading5-size: 1rem * math.pow($typo-scale, 2);
+$heading6-size: 1rem * math.pow($typo-scale, 1);
