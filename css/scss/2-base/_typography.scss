@@ -6,6 +6,11 @@
 	@include bp("small") {
 		font-size: $base-font-size;
 	}
+
+	word-break: break-word;
+	pre {
+		white-space: pre-wrap;
+	}
 }
 
 h1,
