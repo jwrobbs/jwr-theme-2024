@@ -1,0 +1,15 @@
+@use "sass:math";
+
+$breakpoints: (
+	"small": 767px,
+	"medium": 992px,
+	"large": 1200px,
+) !default;
+
+// Section widths with unit
+$width-content: 700px;
+$width-breakout: 1000px;
+
+$breakout-offset: math.div($width-breakout - $width-content, 2);
+
+$container-child-padding: 1rem;
