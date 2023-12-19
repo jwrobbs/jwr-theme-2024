@@ -1,3 +1,27 @@
 #masthead {
 	@extend %container;
+	padding: 0.5rem 0;
+	background-color: $color-accent;
+
+	.header-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.site-name {
+		text-transform: uppercase;
+		font-variation-settings: "wght" 400, "wdth" 75;
+		// letter-spacing: 2px;
+		font-size: 25px;
+		color: $white;
+	}
+
+	.mega-toggle-label {
+		display: none !important;
+
+		@include bp("small") {
+			display: block !important;
+		}
+	}
 }
