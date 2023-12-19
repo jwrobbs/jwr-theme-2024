@@ -1,4 +1,6 @@
+body,
 :root {
+	font-family: $font-body;
 	font-size: $base-font-size-mobile;
 	line-height: $line-height;
 	color: $text-color;
@@ -8,9 +10,6 @@
 	}
 
 	word-break: break-word;
-	pre {
-		white-space: pre-wrap;
-	}
 }
 
 h1,
@@ -19,6 +18,7 @@ h3,
 h4,
 h5,
 h6 {
+	font-family: $font-heading;
 	font-weight: $font-weight-heading;
 	line-height: $line-height-heading;
 	margin: 0.25em 0;
@@ -38,7 +38,122 @@ h4 {
 }
 h5 {
 	font-size: $heading5-size;
+	text-transform: uppercase;
 }
 h6 {
 	font-size: $heading6-size;
+	font-style: italic;
+}
+
+pre {
+	white-space: pre-wrap;
+	font-family: $font-code;
+}
+
+blockquote {
+	margin: 1rem 2rem;
+	background-color: $color-accent;
+
+	p {
+		color: $white;
+		font-style: italic;
+
+		em {
+			font-style: normal;
+		}
+		cite {
+			display: block;
+			font-weight: bold;
+			text-align: right;
+		}
+	}
+	a {
+		color: $white;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+thead {
+	background-color: $color-accent;
+	color: $white;
+}
+tbody {
+	tr:nth-of-type(even) {
+		background-color: $color-accent-hover;
+
+		color: $white;
+
+		a {
+			color: $white;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	tr:nth-of-type(odd) {
+		background-color: darken($white, 7%);
+
+		a {
+			color: $color-accent;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+th,
+td {
+	padding: 0.25rem;
+}
+
+// Definition lists / Description lists
+dl {
+	@include bp("small") {
+		display: grid;
+		grid-template-columns: [term-start] 150px [term-end] 1rem [description-start] 1fr [description-end];
+		row-gap: 0.5rem;
+	}
+	dt {
+		grid-column: term;
+		font-weight: bold;
+	}
+	dd {
+		grid-column: description;
+		@include bp("small") {
+			margin: 0;
+		}
+	}
+}
+
+.site-content {
+	ul,
+	ol {
+		padding-left: $container-child-padding * 2;
+	}
+}
+
+a {
+	color: $color-accent;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+hr {
+	// width: 100%;
+	width: calc(100% - (2 * $container-child-padding));
+}
+
+q {
+	font-style: italic;
 }
