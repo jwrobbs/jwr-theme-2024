@@ -2,7 +2,7 @@ body,
 :root {
 	margin: 0;
 }
-#content {
+.site-content {
 	@extend %container;
 
 	> .breakout {
