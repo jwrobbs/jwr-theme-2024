@@ -34,8 +34,10 @@ use function JWR_Theme_2024\site_name;
 	</a>
 
 	<header id="masthead" class="site-header">
+		<div class='header-container'>
 		<?php site_name(); ?>
 		<nav><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></nav>
+		</div>
 	</header><!-- #masthead -->
 
 	<div class="site-content-contain">
